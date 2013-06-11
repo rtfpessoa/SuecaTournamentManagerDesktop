@@ -18,44 +18,21 @@
  */
  
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
-using NHibernate;
-using NHibernate.Cfg;
-using System.Reflection;
+using Iesi.Collections;
 
-namespace SuecaTournamentManager
+namespace SuecaTournamentManager.Domain
 {
 	/// <summary>
-	/// Description of MainForm.
+	/// Description of Phase.
 	/// </summary>
-	public partial class MainForm : Form
+	public class Phase
 	{
-		private static ISessionFactory sessionFactory;
-		
-		public MainForm()
+		public Phase()
 		{
-			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
-			
-			OpenSession();
 		}
 		
-		public ISession OpenSession()
-		{
-			if(sessionFactory == null)
-			{
-				Configuration cfg = new Configuration();
-				cfg.Configure();
-				cfg.AddAssembly(Assembly.GetCallingAssembly());
-				sessionFactory = cfg.BuildSessionFactory();
-			}
-			
-			return sessionFactory.OpenSession();
-		}
+		public virtual int Id { get; set; }
+		public virtual ISet Matches { get; set; }
+		public virtual Tournament Tournament { get; set; }
 	}
 }

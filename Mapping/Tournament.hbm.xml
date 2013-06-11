@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="SuecaTournamentManager"
+				   namespace="SuecaTournamentManager.Domain"
+				   auto-import="true">
+	<class name="Tournament" table="Tournaments">
+		<id name="Id">
+			<generator class="native" />
+		</id>
+		<property name="Name" />
+		<set name="Teams">
+			<key column="Id"/>
+			<one-to-many class="Team"/>
+		</set>
+		<set name="Associations">
+			<key column="Id"/>
+			<one-to-many class="Association"/>
+		</set>
+		<set name="Phases">
+			<key column="Id"/>
+			<one-to-many class="Phase"/>
+		</set>
+		<set name="Matches">
+			<key column="Id"/>
+			<one-to-many class="Match"/>
+		</set>	
+	</class>
+</hibernate-mapping>

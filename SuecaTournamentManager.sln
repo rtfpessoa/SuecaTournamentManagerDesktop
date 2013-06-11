@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 # SharpDevelop 4.3
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuecaTournamentManager", "SuecaTournamentManager.csproj", "{AE3A8F9C-6FAE-4AC2-AC2A-9DFC3F742378}"
 EndProject
