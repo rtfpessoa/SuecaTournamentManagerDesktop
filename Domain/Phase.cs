@@ -16,23 +16,23 @@
  * along with Sueca Tournament Manager.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
- 
+
 using System;
 using Iesi.Collections;
 
 namespace SuecaTournamentManager.Domain
 {
-	/// <summary>
-	/// Description of Phase.
-	/// </summary>
-	public class Phase
-	{
-		public Phase()
-		{
-		}
-		
-		public virtual int Id { get; set; }
-		public virtual ISet Matches { get; set; }
-		public virtual Tournament Tournament { get; set; }
-	}
+    /// <summary>
+    /// Description of Phase.
+    /// </summary>
+    public class Phase
+    {
+        public Phase()
+        {
+        }
+
+        public virtual int Id { get; set; }
+        public virtual ISet Matches { get; set; }
+        public virtual Tournament Tournament { get; set; }
+    }
 }

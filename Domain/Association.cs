@@ -16,23 +16,24 @@
  * along with Sueca Tournament Manager.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
- 
+
 using System;
 using Iesi.Collections;
 
 namespace SuecaTournamentManager.Domain
 {
-	/// <summary>
-	/// Description of Association.
-	/// </summary>
-	public class Association
-	{
-		public Association()
-		{
-		}
-		
+    /// <summary>
+    /// Description of Association.
+    /// </summary>
+    public class Association
+    {
+        public Association()
+        {
+        }
+
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
         public virtual ISet Teams { get; set; }
-	}
+        public virtual ISet Tournaments { get; set; }
+    }
 }

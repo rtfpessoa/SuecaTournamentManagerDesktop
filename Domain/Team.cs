@@ -22,17 +22,18 @@ using Iesi.Collections;
 
 namespace SuecaTournamentManager.Domain
 {
-	/// <summary>
-	/// Description of Team.
-	/// </summary>
-	public class Team
-	{
-		public Team()
-		{
-		}
-		
-		public virtual int Id { get; set; }
-		public virtual ISet Elements { get; set; }
-		public virtual Association Association { get; set; }
-	}
+    /// <summary>
+    /// Description of Team.
+    /// </summary>
+    public class Team
+    {
+        public Team()
+        {
+        }
+
+        public virtual int Id { get; set; }
+        public virtual ISet Elements { get; set; }
+        public virtual Association Association { get; set; }
+        public virtual ISet Tournaments { get; set; }
+    }
 }

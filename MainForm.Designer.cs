@@ -17,6 +17,10 @@
   *
   */
  
+using System;
+using System.ComponentModel;
+using System.Windows.Forms;
+
 namespace SuecaTournamentManager
 {
 	partial class MainForm
@@ -24,7 +28,7 @@ namespace SuecaTournamentManager
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -47,12 +51,14 @@ namespace SuecaTournamentManager
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// MainForm
 			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "SuecaTournamentManager";
+			this.ClientSize = new System.Drawing.Size(282, 253);
 			this.Name = "MainForm";
+			this.Text = "SuecaTournamentManager";
+			this.ResumeLayout(false);
 		}
 	}
 }

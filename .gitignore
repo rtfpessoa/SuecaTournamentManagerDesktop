@@ -40,12 +40,15 @@ local.properties
 *.suo
 *.user
 *.sln.docstates
+packages.config
 
 # Build results
 
+[Pp]ackages/
 [Dd]ebug/
 [Rr]elease/
 x64/
+x86/
 build/
 [Bb]in/
 [Oo]bj/

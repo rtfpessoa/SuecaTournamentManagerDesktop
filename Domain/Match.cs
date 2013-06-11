@@ -16,26 +16,26 @@
  * along with Sueca Tournament Manager.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
- 
+
 using System;
 using Iesi.Collections;
 
 namespace SuecaTournamentManager.Domain
 {
-	/// <summary>
-	/// Description of Match.
-	/// </summary>
-	public class Match
-	{
-		public Match()
-		{
-		}
-		
-		public virtual int Id { get; set; }
-		public virtual int Score { get; set; }
-		public virtual int Lines { get; set; }
-		public virtual ISet Teams { get; set; }
-		public virtual Phase Phase { get; set; }
-		public virtual Tournament Tournament { get; set; }
-	}
+    /// <summary>
+    /// Description of Match.
+    /// </summary>
+    public class Match
+    {
+        public Match()
+        {
+        }
+
+        public virtual int Id { get; set; }
+        public virtual int Score { get; set; }
+        public virtual int Lines { get; set; }
+        public virtual ISet Teams { get; set; }
+        public virtual Phase Phase { get; set; }
+        public virtual Tournament Tournament { get; set; }
+    }
 }

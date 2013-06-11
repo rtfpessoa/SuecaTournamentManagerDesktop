@@ -16,22 +16,22 @@
  * along with Sueca Tournament Manager.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
- 
+
 using System;
 
 namespace SuecaTournamentManager.Domain
 {
-	/// <summary>
-	/// Description of Element.
-	/// </summary>
-	public class Element
-	{
-		public Element()
-		{
-		}
-		
+    /// <summary>
+    /// Description of Element.
+    /// </summary>
+    public class Element
+    {
+        public Element()
+        {
+        }
+
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
         public virtual Team Team { get; set; }
-	}
+    }
 }

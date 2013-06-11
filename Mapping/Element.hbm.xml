@@ -3,11 +3,11 @@
 				   assembly="SuecaTournamentManager"
 				   namespace="SuecaTournamentManager.Domain"
 				   auto-import="true">
-	<class name="Element" table="Elements">
-		<id name="Id">
-			<generator class="native" />
-		</id>
-		<property name="Name" />
-		<many-to-one name="Team" class="Team" />
-	</class>
+  <class name="Element" table="Elements">
+    <id name="Id">
+      <generator class="native" />
+    </id>
+    <property name="Name" />
+    <many-to-one name="Team" class="Team" />
+  </class>
 </hibernate-mapping>

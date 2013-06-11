@@ -3,17 +3,17 @@
 				   assembly="SuecaTournamentManager"
 				   namespace="SuecaTournamentManager.Domain"
 				   auto-import="true">
-	<class name="Match" table="Matches">
-		<id name="Id">
-			<generator class="native" />
-		</id>
-		<property name="Score" />
-		<property name="Lines" />
-		<set name="Teams">
-			<key column="Id"/>
-			<one-to-many class="Team"/>
-		</set>
-		<many-to-one name="Phase" class="Phase" />
-		<many-to-one name="Tournament" class="Tournament" />
-	</class>
+  <class name="Match" table="Matches">
+    <id name="Id">
+      <generator class="native" />
+    </id>
+    <property name="Score" />
+    <property name="Lines" />
+    <set name="Teams">
+      <key column="matchId"/>
+      <one-to-many class="Team"/>
+    </set>
+    <many-to-one name="Phase" class="Phase" />
+    <many-to-one name="Tournament" class="Tournament" />
+  </class>
 </hibernate-mapping>

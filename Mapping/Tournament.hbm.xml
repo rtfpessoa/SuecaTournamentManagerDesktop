@@ -3,26 +3,26 @@
 				   assembly="SuecaTournamentManager"
 				   namespace="SuecaTournamentManager.Domain"
 				   auto-import="true">
-	<class name="Tournament" table="Tournaments">
-		<id name="Id">
-			<generator class="native" />
-		</id>
-		<property name="Name" />
-		<set name="Teams">
-			<key column="Id"/>
-			<one-to-many class="Team"/>
-		</set>
-		<set name="Associations">
-			<key column="Id"/>
-			<one-to-many class="Association"/>
-		</set>
-		<set name="Phases">
-			<key column="Id"/>
-			<one-to-many class="Phase"/>
-		</set>
-		<set name="Matches">
-			<key column="Id"/>
-			<one-to-many class="Match"/>
-		</set>	
-	</class>
+  <class name="Tournament" table="Tournaments">
+    <id name="Id">
+      <generator class="native" />
+    </id>
+    <property name="Name" />
+    <set name="Teams" table="TeamsTournaments" cascade="save-update">
+      <key column="tournamentId"/>
+      <many-to-many class="Team" column="teamId" not-found="ignore" />
+    </set>
+    <set name="Associations" table="AssociationsTournaments" cascade="save-update">
+      <key column="tournamentId"/>
+      <many-to-many class="Association" column="associationId" not-found="ignore" />
+    </set>
+    <set name="Phases">
+      <key column="tournamentId"/>
+      <one-to-many class="Phase"/>
+    </set>
+    <set name="Matches">
+      <key column="tournamentId"/>
+      <one-to-many class="Match"/>
+    </set>
+  </class>
 </hibernate-mapping>
