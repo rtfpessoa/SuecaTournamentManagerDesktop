@@ -1,61 +1,70 @@
-﻿/*
- * Sueca Tournament Manager - Simple Sueca tournament manager
- * Copyright (C) 2013  rtfpessoa
- *
- * Sueca Tournament Manager is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Sueca Tournament Manager is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Sueca Tournament Manager.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
- 
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
-using NHibernate;
+﻿using NHibernate;
 using NHibernate.Cfg;
 using System.Reflection;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Resources;
+using System.Globalization;
 
 namespace SuecaTournamentManager
 {
-	/// <summary>
-	/// Description of MainForm.
-	/// </summary>
-	public partial class MainForm : Form
-	{
-		private static ISessionFactory sessionFactory;
-		
-		public MainForm()
-		{
-			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
-			
-			OpenSession();
-		}
-		
-		public ISession OpenSession()
-		{
-			if(sessionFactory == null)
-			{
-				Configuration cfg = new Configuration();
-				cfg.Configure();
-				cfg.AddAssembly(Assembly.GetCallingAssembly());
-				sessionFactory = cfg.BuildSessionFactory();
-			}
-			
-			return sessionFactory.OpenSession();
-		}
-	}
+    public partial class MainForm : Form
+    {
+        private static ISessionFactory sessionFactory;
+
+        private CultureInfo culture;
+        private ResourceManager ressourceManager;
+
+        public MainForm()
+        {
+            InitializeComponent();
+
+            LoadRessources();
+
+            //this.Icon = new Icon("Ressources/icon.ico");
+
+            /* Setup SQLite database schema and connection factory */
+            OpenSession();
+        }
+
+        private void LoadRessources()
+        {
+            // Start ressource manager
+            culture = CultureInfo.CurrentCulture;
+            /* Force language
+             * culture = CultureInfo.CreateSpecificCulture("pt-PT");
+             */
+            ressourceManager = new ResourceManager("SuecaTournamentManager.MainForm", Assembly.GetExecutingAssembly());
+
+            // Load ressources
+            this.startButton.Text = ressourceManager.GetString("start", culture);
+        }
+
+        public ISession OpenSession()
+        {
+            if (sessionFactory == null)
+            {
+                Configuration cfg = new Configuration();
+                cfg.Configure();
+                cfg.AddAssembly(Assembly.GetCallingAssembly());
+                sessionFactory = cfg.BuildSessionFactory();
+            }
+
+            return sessionFactory.OpenSession();
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form start = new View.StartForm();
+            start.Show();
+
+        }
+    }
 }

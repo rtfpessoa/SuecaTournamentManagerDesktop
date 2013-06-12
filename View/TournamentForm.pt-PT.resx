@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="start" xml:space="preserve">
-    <value>START</value>
+  <data name="form_name" xml:space="preserve">
+    <value>Torneio</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Enviar</value>
   </data>
 </root>

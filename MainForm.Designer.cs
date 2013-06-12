@@ -1,64 +1,62 @@
-﻿/*
-  * Sueca Tournament Manager - Simple Sueca tournament manager
-  * Copyright (C) 2013  rtfpessoa
-  *
-  * Sueca Tournament Manager is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 3 of the License, or
-  * (at your option) any later version.
-  *
-  * Sueca Tournament Manager is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with Sueca Tournament Manager.  If not, see <http://www.gnu.org/licenses/>.
-  *
-  */
- 
-using System;
-using System.ComponentModel;
-using System.Windows.Forms;
-
-namespace SuecaTournamentManager
+﻿namespace SuecaTournamentManager
 {
-	partial class MainForm
-	{
-		/// <summary>
-		/// Designer variable used to keep track of non-visual components.
-		/// </summary>
-		private IContainer components = null;
-		
-		/// <summary>
-		/// Disposes resources used by the form.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing) {
-				if (components != null) {
-					components.Dispose();
-				}
-			}
-			base.Dispose(disposing);
-		}
-		
-		/// <summary>
-		/// This method is required for Windows Forms designer support.
-		/// Do not change the method contents inside the source code editor. The Forms designer might
-		/// not be able to load this method if it was changed manually.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			this.SuspendLayout();
-			// 
-			// MainForm
-			// 
-			this.ClientSize = new System.Drawing.Size(282, 253);
-			this.Name = "MainForm";
-			this.Text = "SuecaTournamentManager";
-			this.ResumeLayout(false);
-		}
-	}
+    partial class MainForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        private System.Windows.Forms.Button startButton;
+        
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.startButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // startButton
+            // 
+            this.startButton.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.Location = new System.Drawing.Point(121, 171);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(179, 70);
+            this.startButton.TabIndex = 0;
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Text = "START";
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(432, 253);
+            this.Controls.Add(this.startButton);
+            this.Name = "MainForm";
+            this.Text = "Sueca Tournament Manager";
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+    }
 }
+
