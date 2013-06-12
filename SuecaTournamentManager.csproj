@@ -108,34 +108,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MainForm.en-US.resx">
+      <DependentUpon>MainForm.Designer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.pt-PT.resx">
       <DependentUpon>MainForm.Designer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.Designer.cs</DependentUpon>
+    <EmbeddedResource Include="View\AssociationForm.en-US.resx">
+      <DependentUpon>AssociationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AssociationForm.pt-PT.resx">
       <DependentUpon>AssociationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AssociationForm.resx">
-      <DependentUpon>AssociationForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\StartForm.en-US.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StartForm.pt-PT.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\TeamForm.en-US.resx">
+      <DependentUpon>TeamForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TeamForm.pt-PT.resx">
       <DependentUpon>TeamForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TeamForm.resx">
-      <DependentUpon>TeamForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\TournamentForm.pt-PT.resx">
+    <EmbeddedResource Include="View\TournamentForm.en-US.resx">
       <DependentUpon>TournamentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TournamentForm.resx">
+    <EmbeddedResource Include="View\TournamentForm.pt-PT.resx">
       <DependentUpon>TournamentForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />

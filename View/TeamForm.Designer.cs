@@ -44,7 +44,7 @@
             this.namesLabel.AutoSize = true;
             this.namesLabel.Location = new System.Drawing.Point(118, 70);
             this.namesLabel.Name = "namesLabel";
-            this.namesLabel.Size = new System.Drawing.Size(46, 17);
+            this.namesLabel.Size = new System.Drawing.Size(56, 17);
             this.namesLabel.TabIndex = 0;
             this.namesLabel.Text = "Names:";
             // 
@@ -70,8 +70,9 @@
             this.namesButton.TabIndex = 3;
             this.namesButton.Text = "Submit";
             this.namesButton.UseVisualStyleBackColor = true;
+            this.namesButton.Click += new System.EventHandler(this.namesButton_Click);
             // 
-            // Team
+            // TeamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +81,7 @@
             this.Controls.Add(this.name2TextBox);
             this.Controls.Add(this.name1TextBox);
             this.Controls.Add(this.namesLabel);
-            this.Name = "Team";
+            this.Name = "TeamForm";
             this.Text = "SMT | Team";
             this.ResumeLayout(false);
             this.PerformLayout();

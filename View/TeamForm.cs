@@ -36,8 +36,13 @@ namespace SuecaTournamentManager.View
             // Load ressources
             this.Name = ressourceManager.GetString("form_name", culture);
             this.Text = "SMT | " + this.Name;
-            this.namesLabel.Text = ressourceManager.GetString("form_name", culture);
-            this.namesButton.Text = ressourceManager.GetString("form_name", culture);
+            this.namesLabel.Text = ressourceManager.GetString("names", culture);
+            this.namesButton.Text = ressourceManager.GetString("submit", culture);
+        }
+
+        private void namesButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

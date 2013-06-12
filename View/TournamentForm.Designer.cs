@@ -61,8 +61,9 @@
             this.tournamentButton.TabIndex = 2;
             this.tournamentButton.Text = "Submit";
             this.tournamentButton.UseVisualStyleBackColor = true;
+            this.tournamentButton.Click += new System.EventHandler(this.tournamentButton_Click);
             // 
-            // Tournament
+            // TournamentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +71,7 @@
             this.Controls.Add(this.tournamentButton);
             this.Controls.Add(this.tournamentTextBox);
             this.Controls.Add(this.tournamentLabel);
-            this.Name = "Tournament";
+            this.Name = "TournamentForm";
             this.Text = "SMT | Tournament";
             this.ResumeLayout(false);
             this.PerformLayout();

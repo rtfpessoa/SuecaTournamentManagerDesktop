@@ -39,5 +39,10 @@ namespace SuecaTournamentManager.View
             this.tournamentLabel.Text = ressourceManager.GetString("name", culture);
             this.tournamentButton.Text = ressourceManager.GetString("submit", culture);
         }
+
+        private void tournamentButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

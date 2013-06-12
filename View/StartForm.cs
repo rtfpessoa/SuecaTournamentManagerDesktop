@@ -49,21 +49,18 @@ namespace SuecaTournamentManager.View
 
         private void newTournamentButton_Click(object sender, EventArgs e)
         {
-            Hide();
             Form tournament = new TournamentForm();
             tournament.Show();
         }
 
         private void newTeamButton_Click(object sender, EventArgs e)
         {
-            Hide();
             Form team = new TeamForm();
             team.Show();
         }
 
         private void newAssociationButton_Click(object sender, EventArgs e)
         {
-            Hide();
             Form association = new AssociationForm();
             association.Show();
         }

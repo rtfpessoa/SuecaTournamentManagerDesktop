@@ -42,7 +42,7 @@
             this.nameLabel.AutoSize = true;
             this.nameLabel.Location = new System.Drawing.Point(13, 87);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(46, 17);
+            this.nameLabel.Size = new System.Drawing.Size(45, 17);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Name";
             // 
@@ -61,6 +61,7 @@
             this.submitButton.TabIndex = 2;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // AssociationForm
             // 
@@ -70,7 +71,7 @@
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.nameLabel);
-            this.Name = "Association";
+            this.Name = "AssociationForm";
             this.Text = "STM | Association";
             this.ResumeLayout(false);
             this.PerformLayout();
