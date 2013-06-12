@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="associations" xml:space="preserve">
-    <value>Associações</value>
+  <data name="edit_association" xml:space="preserve">
+    <value>Editar Associação</value>
   </data>
-  <data name="edit" xml:space="preserve">
-    <value>Editar</value>
+  <data name="edit_team" xml:space="preserve">
+    <value>Editar Equipa</value>
   </data>
   <data name="form_name" xml:space="preserve">
     <value>Inicio</value>
   </data>
-  <data name="load" xml:space="preserve">
-    <value>Carregar</value>
+  <data name="load_tournament" xml:space="preserve">
+    <value>Carregar Torneio</value>
   </data>
   <data name="new_association_btn" xml:space="preserve">
     <value>Criar Associação</value>
@@ -137,11 +137,5 @@
   </data>
   <data name="new_tournament_btn" xml:space="preserve">
     <value>Criar Torneio</value>
-  </data>
-  <data name="teams" xml:space="preserve">
-    <value>Equipas</value>
-  </data>
-  <data name="tournaments" xml:space="preserve">
-    <value>Torneios</value>
   </data>
 </root>

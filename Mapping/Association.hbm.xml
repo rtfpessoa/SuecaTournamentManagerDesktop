@@ -1,20 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
 				   assembly="SuecaTournamentManager"
-				   namespace="SuecaTournamentManager.Domain"
-				   auto-import="true">
+				   namespace="SuecaTournamentManager.Domain">
   <class name="Association" table="Associations">
     <id name="Id">
       <generator class="native" />
     </id>
     <property name="Name" />
-    <set name="Teams">
+    <bag name="Teams">
       <key column="associationId"/>
       <one-to-many class="Team"/>
-    </set>
-    <set name="Tournaments" table="AssociationsTournaments" cascade="save-update">
+    </bag>
+    <bag name="Tournaments" table="AssociationsTournaments" cascade="save-update">
       <key column="associationId"/>
       <many-to-many class="Tournament" column="tournamentId" not-found="ignore" />
-    </set>
+    </bag>
   </class>
 </hibernate-mapping>

@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using System.Resources;
 using System.Globalization;
 using System.Reflection;
+using NHibernate;
+using SuecaTournamentManager.Utils;
+using SuecaTournamentManager.Domain;
 
 namespace SuecaTournamentManager.View
 {
@@ -34,14 +37,20 @@ namespace SuecaTournamentManager.View
             ressourceManager = new ResourceManager("SuecaTournamentManager.View.TournamentForm", Assembly.GetExecutingAssembly());
 
             // Load ressources
-            this.Name = ressourceManager.GetString("form_name", culture);
-            this.Text = "SMT | " + this.Name;
+            this.Text = "STM | " + ressourceManager.GetString("form_name", culture);
             this.tournamentLabel.Text = ressourceManager.GetString("name", culture);
             this.tournamentButton.Text = ressourceManager.GetString("submit", culture);
+            this.onlyTeamsButton.Text = ressourceManager.GetString("team_competition", culture);
+            this.teamsAndAssociationsButton.Text = ressourceManager.GetString("team_association_competition", culture);
         }
 
         private void tournamentButton_Click(object sender, EventArgs e)
         {
+            ISession session = DatabaseManager.Instance.OpenSession();
+            Tournament tournament = new Tournament();
+            tournament.Name = this.tournamentTextBox.Text;
+            session.Save(tournament);
+            session.Close();
             Close();
         }
     }

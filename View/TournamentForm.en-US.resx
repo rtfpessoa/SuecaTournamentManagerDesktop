@@ -126,4 +126,10 @@
   <data name="submit" xml:space="preserve">
     <value>Submit</value>
   </data>
+  <data name="team_association_competition" xml:space="preserve">
+    <value>Team and Association Competition</value>
+  </data>
+  <data name="team_competition" xml:space="preserve">
+    <value>Team Competition</value>
+  </data>
 </root>

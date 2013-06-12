@@ -79,7 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Association.cs" />
-    <Compile Include="Domain\Element.cs" />
     <Compile Include="Domain\Match.cs" />
     <Compile Include="Domain\Phase.cs" />
     <Compile Include="Domain\Team.cs" />
@@ -90,9 +89,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\DatabaseManager.cs" />
     <Compile Include="View\AssociationForm.cs" />
     <Compile Include="View\AssociationForm.Designer.cs">
       <DependentUpon>AssociationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectionForm.cs" />
+    <Compile Include="View\SelectionForm.Designer.cs">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\StartForm.cs" />
     <Compile Include="View\StartForm.Designer.cs">
@@ -105,6 +109,10 @@
     <Compile Include="View\TournamentForm.cs" />
     <Compile Include="View\TournamentForm.Designer.cs">
       <DependentUpon>TournamentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TournamentSetupForm.cs" />
+    <Compile Include="View\TournamentSetupForm.Designer.cs">
+      <DependentUpon>TournamentSetupForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AssociationForm.pt-PT.resx">
       <DependentUpon>AssociationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectionForm.en-US.resx">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectionForm.pt-PT.resx">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StartForm.en-US.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
@@ -138,10 +152,18 @@
     <EmbeddedResource Include="View\TournamentForm.pt-PT.resx">
       <DependentUpon>TournamentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\TournamentSetupForm.en-US.resx">
+      <DependentUpon>TournamentSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TournamentSetupForm.pt-PT.resx">
+      <DependentUpon>TournamentSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TournamentSetupForm.resx">
+      <DependentUpon>TournamentSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <EmbeddedResource Include="Mapping\Tournament.hbm.xml" />
     <EmbeddedResource Include="Mapping\Team.hbm.xml" />
-    <EmbeddedResource Include="Mapping\Element.hbm.xml" />
     <EmbeddedResource Include="Mapping\Association.hbm.xml" />
     <EmbeddedResource Include="Mapping\Match.hbm.xml" />
     <EmbeddedResource Include="Mapping\Phase.hbm.xml" />
@@ -158,6 +180,7 @@
   <ItemGroup>
     <Folder Include="Domain" />
     <Folder Include="Mapping" />
+    <Folder Include="Utils" />
     <Folder Include="Ressources" />
     <Folder Include="View" />
   </ItemGroup>

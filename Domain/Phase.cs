@@ -18,7 +18,7 @@
  */
 
 using System;
-using Iesi.Collections;
+using System.Collections.Generic;
 
 namespace SuecaTournamentManager.Domain
 {
@@ -29,10 +29,16 @@ namespace SuecaTournamentManager.Domain
     {
         public Phase()
         {
+            Matches = new List<Match>();
         }
 
         public virtual int Id { get; set; }
-        public virtual ISet Matches { get; set; }
+        public virtual IList<Match> Matches { get; set; }
         public virtual Tournament Tournament { get; set; }
+
+        public override string ToString()
+        {
+            return Id.ToString();
+        }
     }
 }

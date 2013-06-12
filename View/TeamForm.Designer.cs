@@ -46,7 +46,7 @@
             this.namesLabel.Name = "namesLabel";
             this.namesLabel.Size = new System.Drawing.Size(56, 17);
             this.namesLabel.TabIndex = 0;
-            this.namesLabel.Text = "Names:";
+            this.namesLabel.Text = "Names";
             // 
             // name1TextBox
             // 

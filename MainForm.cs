@@ -11,13 +11,12 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using System.Globalization;
+using SuecaTournamentManager.Utils;
 
 namespace SuecaTournamentManager
 {
     public partial class MainForm : Form
     {
-        private static ISessionFactory sessionFactory;
-
         private CultureInfo culture;
         private ResourceManager ressourceManager;
 
@@ -30,7 +29,7 @@ namespace SuecaTournamentManager
             //this.Icon = new Icon("Ressources/icon.ico");
 
             /* Setup SQLite database schema and connection factory */
-            OpenSession();
+            DatabaseManager.Instance.OpenSession();
         }
 
         private void LoadRessources()
@@ -44,19 +43,6 @@ namespace SuecaTournamentManager
 
             // Load ressources
             this.startButton.Text = ressourceManager.GetString("start", culture);
-        }
-
-        public ISession OpenSession()
-        {
-            if (sessionFactory == null)
-            {
-                Configuration cfg = new Configuration();
-                cfg.Configure();
-                cfg.AddAssembly(Assembly.GetCallingAssembly());
-                sessionFactory = cfg.BuildSessionFactory();
-            }
-
-            return sessionFactory.OpenSession();
         }
 
         private void startButton_Click(object sender, EventArgs e)
