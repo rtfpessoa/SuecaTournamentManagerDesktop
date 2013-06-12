@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="SuecaTournamentManager.exe" version="1.0.0.1" publicKeyToken="a7bf90db08d4f902" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Ressources\icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SuecaTournamentManager" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="SuecaTournamentManager.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Iesi.Collections.dll" size="32768">
+      <assemblyIdentity name="Iesi.Collections" version="1.0.1.0" publicKeyToken="AA95F207798DFDB4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>aPxA70dVTTrApPTsgpRexZcZMIA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NHibernate.dll" size="4089856">
+      <assemblyIdentity name="NHibernate" version="3.3.1.4000" publicKeyToken="AA95F207798DFDB4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>6627s6VCWFpJtWtBFg+sw8bumFI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SuecaTournamentManager.exe" size="39424">
+      <assemblyIdentity name="SuecaTournamentManager" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>TBXSlwyBAlVjGk4KBcPJl9uKSyg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-PT\SuecaTournamentManager.resources.dll" size="5120">
+      <assemblyIdentity name="SuecaTournamentManager.resources" version="1.0.0.0" language="pt-PT" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>y8CBF3QmDYhSnGviTF/89bRv8jA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.dll" size="1040384">
+      <assemblyIdentity name="System.Data.SQLite" version="1.0.86.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Nf3wIpps5DOuOWYttLMU8RdCG2g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.Linq.dll" size="182784">
+      <assemblyIdentity name="System.Data.SQLite.Linq" version="1.0.86.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1jQkxzl5uQEoGJGOyUlEbJMHflw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Ressources\icon.ico" size="5430">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oLh/ePGTZTFFiyvBlHpdJyEeLm4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SuecaTournamentManager.exe.config" size="1025">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>glbgVx3yhsT1saD72CGsqQTHglw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ARGON\Rodrigo" issuerKeyHash="d907021fae1c5af96060bfbd7076119effd35f5f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>s0+FCnZXslUc8cWDZyiO6/yZhBM=</DigestValue></Reference></SignedInfo><SignatureValue>T6MFc/Zf4OaLZUyBKETEyK6dmRqUQmbNmqhRr/HoME6bpHnapOATdCq3a+Htc5BqArUOS8GxX6wWf/+B1aWuS+QVtCF21EMUJYT4tXuBh0ixtLyoTm9UISN1EV9EczaMf1oNcAPjsUFvaTd76nFopa5Kx91hvQlLRt1PCdi2IgM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wPpPuBchDKczyHPal7TPeDAkv/uPSqlNxG1nbFfWkGSqrS9dK24+LAYtamLcGiKXSeUJI5gDt9u4MeBvznnNkWaOQEyB0BwVzdIALcFhUn56Wq8dRTKSrKN0H951uTFxmbcpqrw4F+Gc4p6isJyNWD3OGMuir3cMEGz+xBUQ1TM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="138499fceb8e286783c5f11c55b257760a854fb3" Description="" Url=""><as:assemblyIdentity name="SuecaTournamentManager.exe" version="1.0.0.1" publicKeyToken="a7bf90db08d4f902" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ARGON\Rodrigo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>B0RNnjLCnZil1+Et67i0kQb3Ni4=</DigestValue></Reference></SignedInfo><SignatureValue>kv1/umZqg/QoxXzZRg5CRGZ1EmwvNDThiqDWAJPn7tXuJEgR39Xx1bzCOTUuWaftT8XQvivZFf2Pnwh19iU131tPt6RM6V4wdedpxvteh9r1L+lHABAhwR02kihwsfrGQ7jriCTMyeuslb1R7wp31wjlcQnJeFofpdIO70OMQDc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wPpPuBchDKczyHPal7TPeDAkv/uPSqlNxG1nbFfWkGSqrS9dK24+LAYtamLcGiKXSeUJI5gDt9u4MeBvznnNkWaOQEyB0BwVzdIALcFhUn56Wq8dRTKSrKN0H951uTFxmbcpqrw4F+Gc4p6isJyNWD3OGMuir3cMEGz+xBUQ1TM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQJtUC6Y/fb6NK2LjN0FkffjANBgkqhkiG9w0BAQUFADAlMSMwIQYDVQQDHhoAQQBSAEcATwBOAFwAUgBvAGQAcgBpAGcAbzAeFw0xMzA2MTEyMDI4MDlaFw0xNDA2MTIwMjI4MDlaMCUxIzAhBgNVBAMeGgBBAFIARwBPAE4AXABSAG8AZAByAGkAZwBvMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDA+k+4FyEMpzPIc9qXtM94MCS/+49KqU3EbWdsV9aQZKqtL10rbj4sBi1qYtwaIpdJ5QkjmAO327gx4G/Oec2RZo5ATIHQHBXN0gAtwWFSfnparx1FMpKso3Qf3nW5MXGZtymqvDgX4ZzinqKwnI1YPc4Yy6KvdwwQbP7EFRDVMwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAGHtPmMEyJkDwwEX2wANPvS+3Omv6zHXrP6RrhRYffIjS/02OeDCB+GQVPYMDcceTRGSiQKW7BfI5QGuDKHtit5ECxPq/xTfEcQ+dya6wdL6El04AySfxOlutAYfD43xu+Os90DDhB+qpmYMbXXmzfKj8wsSUb2ugX/9UGhwYONU</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
