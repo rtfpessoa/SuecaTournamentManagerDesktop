@@ -60,5 +60,12 @@ namespace SuecaTournamentManager.View
             Form team = new TeamForm();
             team.Show();
         }
+
+        private void newAssociationButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form association = new AssociationForm();
+            association.Show();
+        }
     }
 }

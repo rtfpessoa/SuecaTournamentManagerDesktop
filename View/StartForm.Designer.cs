@@ -80,6 +80,7 @@
             this.newAssociationButton.TabIndex = 1;
             this.newAssociationButton.Text = "New Association";
             this.newAssociationButton.UseVisualStyleBackColor = true;
+            this.newAssociationButton.Click += new System.EventHandler(this.newAssociationButton_Click);
             // 
             // newTeamButton
             // 
@@ -169,7 +170,7 @@
             this.editTeamLabel.TabIndex = 11;
             this.editTeamLabel.Text = "Teams";
             // 
-            // Start
+            // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +187,7 @@
             this.Controls.Add(this.newTeamButton);
             this.Controls.Add(this.newAssociationButton);
             this.Controls.Add(this.newTournamentButton);
-            this.Name = "Start";
+            this.Name = "StartForm";
             this.Text = "STM | Start";
             this.ResumeLayout(false);
             this.PerformLayout();
