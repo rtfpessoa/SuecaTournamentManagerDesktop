@@ -158,9 +158,6 @@
     <EmbeddedResource Include="View\TournamentSetupForm.pt-PT.resx">
       <DependentUpon>TournamentSetupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TournamentSetupForm.resx">
-      <DependentUpon>TournamentSetupForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <EmbeddedResource Include="Mapping\Tournament.hbm.xml" />
     <EmbeddedResource Include="Mapping\Team.hbm.xml" />

@@ -51,7 +51,7 @@ namespace SuecaTournamentManager.View
         private void addAssociationButton_Click(object sender, EventArgs e)
         {
             ISession session = DatabaseManager.Instance.OpenSession();
-            IList<Object> associations = session.QueryOver<Object>("Association").List();
+            IList<Object> associations = session.CreateCriteria<Association>().Add(Restrictions.IsEmpty("Tournaments")).List<Object>();
             SelectionForm selection = new SelectionForm(associations);
             selection.ShowDialog();
 
@@ -91,7 +91,7 @@ namespace SuecaTournamentManager.View
         private void addTeamButton_Click(object sender, EventArgs e)
         {
             ISession session = DatabaseManager.Instance.OpenSession();
-            IList<Object> teams = session.QueryOver<Object>("Team").List();
+            IList<Object> teams = session.CreateCriteria<Team>().Add(Restrictions.IsEmpty("Tournaments")).List<Object>();
             SelectionForm selection = new SelectionForm(teams);
             selection.ShowDialog();
 
