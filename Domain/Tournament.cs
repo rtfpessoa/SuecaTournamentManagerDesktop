@@ -29,18 +29,21 @@ namespace SuecaTournamentManager.Domain
     {
         public Tournament()
         {
-            Teams = new List<Team>();
             Associations = new List<Association>();
+            Teams = new List<Team>();
             Phases = new List<Phase>();
             Matches = new List<Match>();
+            Results = new List<Result>();
         }
 
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
-        public virtual IList<Team> Teams { get; set; }
+        public virtual bool TournamentWithAssociations { get; set; }
         public virtual IList<Association> Associations { get; set; }
+        public virtual IList<Team> Teams { get; set; }
         public virtual IList<Phase> Phases { get; set; }
         public virtual IList<Match> Matches { get; set; }
+        public virtual IList<Result> Results { get; set; }
 
         public override string ToString()
         {

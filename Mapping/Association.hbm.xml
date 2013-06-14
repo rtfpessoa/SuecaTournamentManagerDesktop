@@ -7,13 +7,13 @@
       <generator class="native" />
     </id>
     <property name="Name" />
-    <bag name="Teams">
-      <key column="associationId"/>
-      <one-to-many class="Team"/>
-    </bag>
     <bag name="Tournaments" table="AssociationsTournaments" cascade="save-update">
       <key column="associationId"/>
       <many-to-many class="Tournament" column="tournamentId" not-found="ignore" />
+    </bag>    
+    <bag name="Teams">
+      <key column="associationId"/>
+      <one-to-many class="Team"/>
     </bag>
   </class>
 </hibernate-mapping>

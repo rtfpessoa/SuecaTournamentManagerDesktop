@@ -2,18 +2,15 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
 				   assembly="SuecaTournamentManager"
 				   namespace="SuecaTournamentManager.Domain">
-  <class name="Phase" table="Phases">
+  <class name="Result" table="Results">
     <id name="Id">
       <generator class="native" />
     </id>
-    <bag name="Matches">
-      <key column="phaseId"/>
-      <one-to-many class="Match"/>
-    </bag>
-    <bag name="Results">
-      <key column="phaseId"/>
-      <one-to-many class="Result"/>
-    </bag>
+    <property name="Score" />
+    <property name="Lines" />
+    <many-to-one name="Team" class="Team" />
+    <one-to-one name="Match" class="Match" />
+    <many-to-one name="Phase" class="Phase" />
     <many-to-one name="Tournament" class="Tournament" />
   </class>
 </hibernate-mapping>

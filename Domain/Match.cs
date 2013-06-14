@@ -29,19 +29,19 @@ namespace SuecaTournamentManager.Domain
     {
         public Match()
         {
-            Teams = new List<Team>();
         }
 
         public virtual int Id { get; set; }
-        public virtual int Score { get; set; }
-        public virtual int Lines { get; set; }
-        public virtual IList<Team> Teams { get; set; }
+        public virtual Result Result1 { get; set; }
+        public virtual Result Result2 { get; set; }
+        public virtual Team Team1 { get; set; }
+        public virtual Team Team2 { get; set; }
         public virtual Phase Phase { get; set; }
         public virtual Tournament Tournament { get; set; }
 
         public override string ToString()
         {
-            return Phase + " - " + Teams.GetEnumerator().Current + " x " + Teams.GetEnumerator().MoveNext();
+            return Phase + " => " + Team1 + " x " + Team2;
         }
     }
 }

@@ -77,6 +77,7 @@
             this.onlyTeamsButton.TabStop = true;
             this.onlyTeamsButton.Text = "Team Competition";
             this.onlyTeamsButton.UseVisualStyleBackColor = true;
+            this.onlyTeamsButton.Checked = true;
             // 
             // teamsAndAssociationsButton
             // 

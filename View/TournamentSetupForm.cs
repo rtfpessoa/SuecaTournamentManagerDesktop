@@ -125,5 +125,18 @@ namespace SuecaTournamentManager.View
             }
             session.Close();
         }
+
+        private void startTournamentButton_Click(object sender, EventArgs e)
+        {
+            ISession session = DatabaseManager.Instance.OpenSession();
+            Tournament tournament = session.Load<Tournament>(tournamentId);
+
+            MatchMaker matchMaker = new MatchMaker();
+            matchMaker.RandomMatch(tournamentId, tournament.Teams);
+            
+            TournamentMainForm tmf = new TournamentMainForm(tournamentId);
+            tmf.Show();
+            Close();
+        }
     }
 }

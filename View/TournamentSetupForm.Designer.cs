@@ -111,6 +111,7 @@
             this.startTournamentButton.TabIndex = 8;
             this.startTournamentButton.Text = "Start Tournament";
             this.startTournamentButton.UseVisualStyleBackColor = true;
+            this.startTournamentButton.Click += new System.EventHandler(this.startTournamentButton_Click);
             // 
             // TournamentSetupForm
             // 

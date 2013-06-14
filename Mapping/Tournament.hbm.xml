@@ -7,13 +7,14 @@
       <generator class="native" />
     </id>
     <property name="Name" />
-    <bag name="Teams" table="TeamsTournaments" cascade="save-update">
-      <key column="tournamentId"/>
-      <many-to-many class="Team" column="teamId" not-found="ignore" />
-    </bag>
+    <property name="TournamentWithAssociations" />
     <bag name="Associations" table="AssociationsTournaments" cascade="save-update">
       <key column="tournamentId"/>
       <many-to-many class="Association" column="associationId" not-found="ignore" />
+    </bag>
+    <bag name="Teams" table="TeamsTournaments" cascade="save-update">
+      <key column="tournamentId"/>
+      <many-to-many class="Team" column="teamId" not-found="ignore" />
     </bag>
     <bag name="Phases">
       <key column="tournamentId"/>
@@ -22,6 +23,10 @@
     <bag name="Matches">
       <key column="tournamentId"/>
       <one-to-many class="Match"/>
+    </bag>
+    <bag name="Results">
+      <key column="tournamentId"/>
+      <one-to-many class="Result"/>
     </bag>
   </class>
 </hibernate-mapping>

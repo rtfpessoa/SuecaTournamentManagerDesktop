@@ -29,14 +29,14 @@ namespace SuecaTournamentManager.Domain
     {
         public Association()
         {
-            Teams = new List<Team>();
             Tournaments = new List<Tournament>();
+            Teams = new List<Team>();
         }
 
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
-        public virtual IList<Team> Teams { get; set; }
         public virtual IList<Tournament> Tournaments { get; set; }
+        public virtual IList<Team> Teams { get; set; }
 
         public override string ToString()
         {

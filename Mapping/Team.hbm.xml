@@ -13,5 +13,13 @@
       <key column="teamId"/>
       <many-to-many class="Tournament" column="tournamentId" not-found="ignore" />
     </bag>
+    <bag name="Results">
+      <key column="teamId"/>
+      <one-to-many class="Result"/>
+    </bag>
+    <bag name="Matches">
+      <key column="teamId"/>
+      <one-to-many class="Match"/>
+    </bag>
   </class>
 </hibernate-mapping>

@@ -6,12 +6,10 @@
     <id name="Id">
       <generator class="native" />
     </id>
-    <property name="Score" />
-    <property name="Lines" />
-    <bag name="Teams">
-      <key column="matchId"/>
-      <one-to-many class="Team"/>
-    </bag>
+    <one-to-one name="Result1" class="Result" />
+    <one-to-one name="Result2" class="Result" />
+    <many-to-one name="Team1" class="Team" />
+    <many-to-one name="Team2" class="Team" />
     <many-to-one name="Phase" class="Phase" />
     <many-to-one name="Tournament" class="Tournament" />
   </class>

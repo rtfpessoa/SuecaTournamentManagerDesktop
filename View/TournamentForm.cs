@@ -49,6 +49,7 @@ namespace SuecaTournamentManager.View
             ISession session = DatabaseManager.Instance.OpenSession();
             Tournament tournament = new Tournament();
             tournament.Name = this.tournamentTextBox.Text;
+            tournament.TournamentWithAssociations = this.teamsAndAssociationsButton.Checked;
             session.Save(tournament);
             session.Close();
             Close();

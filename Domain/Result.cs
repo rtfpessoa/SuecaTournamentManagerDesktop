@@ -23,27 +23,25 @@ using System.Collections.Generic;
 namespace SuecaTournamentManager.Domain
 {
     /// <summary>
-    /// Description of Team.
+    /// Description of Result.
     /// </summary>
-    public class Team
+    public class Result
     {
-        public Team()
+        public Result()
         {
-            Tournaments = new List<Tournament>();
-            Results = new List<Result>();
         }
 
         public virtual int Id { get; set; }
-        public virtual string Name1 { get; set; }
-        public virtual string Name2 { get; set; }
-        public virtual Association Association { get; set; }
-        public virtual IList<Tournament> Tournaments { get; set; }
-        public virtual IList<Result> Results { get; set; }
-        public virtual IList<Match> Matches { get; set; }
+        public virtual int Score { get; set; }
+        public virtual int Lines { get; set; }
+        public virtual Team Team { get; set; }
+        public virtual Match Match { get; set; }
+        public virtual Phase Phase { get; set; }
+        public virtual Tournament Tournament { get; set; }
 
         public override string ToString()
         {
-            return Name1 + " & " + Name2;
+            return Score + " | " + Lines;
         }
     }
 }

@@ -30,10 +30,12 @@ namespace SuecaTournamentManager.Domain
         public Phase()
         {
             Matches = new List<Match>();
+            Results = new List<Result>();
         }
 
         public virtual int Id { get; set; }
         public virtual IList<Match> Matches { get; set; }
+        public virtual IList<Result> Results { get; set; }
         public virtual Tournament Tournament { get; set; }
 
         public override string ToString()
